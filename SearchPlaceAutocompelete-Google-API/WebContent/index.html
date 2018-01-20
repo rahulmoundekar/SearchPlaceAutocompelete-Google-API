@@ -1,0 +1,35 @@
+<script src="geocomplete/js/jquery.min.js"></script>
+<script
+	src="http://maps.googleapis.com/maps/api/js?sensor=true&libraries=places&key=AIzaSyCza7CBU3jnRcdNyjkh7Rf2SvQiBj2OQKI"></script>
+<script src="geocomplete/js/jquery.geocomplete.min.js"></script>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+	var jq = jQuery.noConflict();
+	jq(function() {
+		jq("#location").geocomplete({
+			details : ".geo-details",
+			detailsAttribute : "data-geo"
+		});
+
+	});
+</script>
+
+<div class="row modify-search modify-car">
+	<div class="container clear-padding" style="padding-left: 141px;">
+		<div class="col-md-2"></div>
+		<div class="col-md-6">
+			<div class="form-gp">
+				<label>Pick Up Location</label>
+				<div class="input-group margin-bottom-sm">
+					<input type="text" name="location" id="location"
+						class="form-control" required placeholder="E.g. London"> <span
+						class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
